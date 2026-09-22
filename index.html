@@ -1,0 +1,666 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./index.css" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+            rel="stylesheet"
+        />
+        <title>Hiraya</title>
+    </head>
+    <body>
+        <header>
+            <nav
+                id="navbar"
+                class="navbar navbar-expand-lg navbar-dark bg-dark"
+            >
+                <div class="container-fluid">
+                    <div
+                        id="logo-wrapper"
+                        class="d-flex offset-1 offset-md-2 justify-content-center align-items-end"
+                    >
+                        <div class="d-flex flex-column justify-content-center">
+                            <img
+                                src="./images/hirayaLogoSymbol.png"
+                                class="img-fluid logo-symbol"
+                            />
+                            <img
+                                src="./images/hirayaLogoText.png"
+                                class="img-fluid logo-text mx-3"
+                            />
+                        </div>
+                    </div>
+                    <button
+                        class="navbar-toggler ms-auto"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarTogglerDemo01"
+                        aria-controls="navbarTogglerDemo01"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div
+                        class="collapse navbar-collapse"
+                        id="navbarTogglerDemo01"
+                    >
+                        <ul
+                            class="navbar-nav ms-auto mb-2 mb-md-0 text-end text-lg-start"
+                        >
+                            <li class="nav-item mt-3 mt-md-0">
+                                <a
+                                    class="nav-link active px-2 custom-hover-navlink"
+                                    aria-current="page"
+                                    href="#landing"
+                                    >Home</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link px-2 custom-hover-navlink"
+                                    href="./flightListings.html"
+                                    >Flights</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link px-2 custom-hover-navlink"
+                                    href="./about.html"
+                                    >About</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link px-2 custom-hover-navlink"
+                                    href="./contact.html"
+                                    >Contact</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <!-- Start of Landing -->
+            <section
+                id="landing"
+                class="container-fluid m-0 p-0 d-flex flex-column"
+            >
+                <div id="main-landing-heading-wrapper">
+                    <div
+                        id="landing-mainheading-wrapper"
+                        class="col-10 offset-1 col-md-8 offset-md-2"
+                    >
+                        <h1>A Mystical Escape Awaits</h1>
+                    </div>
+                    <div
+                        id="landing-subheading-wrapper"
+                        class="col-10 offset-1 col-md-8 offset-md-2"
+                    >
+                        <h3>Discover the Philippines in a mysterious light.</h3>
+                    </div>
+                </div>
+                <div class="d-flex flex-row">
+                    <div class="offset-1 offset-md-2 pt-3">
+                        <a href="./bookingSiquijor.html">
+                            <button
+                                id="flight-search-submit-btn"
+                                type="button"
+                                class="btn w-100"
+                            >
+                                Book Now
+                            </button>
+                        </a>
+                    </div>
+                    <div class="pt-3 ms-3">
+                        <a href="./flightListings.html">
+                            <button
+                                id="view-flights-btn"
+                                type="button"
+                                class="btn w-100"
+                            >
+                                View Flights
+                            </button>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="flight-search-tab" class="mt-auto">
+                    <div
+                        class="d-flex col-10 offset-1 col-md-8 offset-md-2 text-center"
+                    >
+                        <div
+                            id="flight-search-btn-wrapper-1"
+                            class="flex-fill d-flex justify-content-center align-items-center"
+                        >
+                            <button class="flight-search-btn">
+                                Start a new search
+                            </button>
+                        </div>
+                        <div
+                            id="flight-search-btn-wrapper-2"
+                            class="flex-fill d-none d-md-flex justify-content-center align-items-center"
+                        >
+                            <button class="flight-search-btn">
+                                Manage Booking
+                            </button>
+                        </div>
+                        <div
+                            id="flight-search-btn-wrapper-3"
+                            class="flex-fill d-none d-md-flex justify-content-center align-items-center"
+                        >
+                            <button class="flight-search-btn">Check-in</button>
+                        </div>
+                        <div
+                            id="flight-search-btn-wrapper-4"
+                            class="flex-fill d-none d-md-flex justify-content-center align-items-center"
+                        >
+                            <button class="flight-search-btn">
+                                Flight Status
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section
+                id="landing-2"
+                class="container-fluid m-0 p-0 d-flex flex-column"
+            >
+                <div id="flight-search-content" class="pb-3 pb-md-5">
+                    <div class="d-flex col-10 offset-1 col-md-8 offset-md-2">
+                        <div class="container-fluid">
+                            <div
+                                id="flight-search-input-wrapper"
+                                class="row align-items-center"
+                            >
+                                <form
+                                    class="d-flex flex-column flex-md-row justify-content-around"
+                                >
+                                    <div
+                                        class="form-group col-12 col-md-4 align-items-center"
+                                    >
+                                        <label class="form-label"
+                                            >Departure Airport</label
+                                        >
+                                        <select
+                                            id="from"
+                                            name="from"
+                                            class="form-control"
+                                            aria-label="Manila"
+                                        >
+                                            <option selected>Manila</option>
+                                            <option value="antique">
+                                                Antique
+                                            </option>
+                                            <option value="batanes">
+                                                Batanes
+                                            </option>
+                                            <option value="benguet">
+                                                Benguet
+                                            </option>
+                                            <option value="manila">
+                                                Manila
+                                            </option>
+                                            <option value="quezon">
+                                                Quezon
+                                            </option>
+                                            <option value="samar">Samar</option>
+                                            <option value="siquijor">
+                                                Siquijor
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <div
+                                        class="form-group col-12 col-md-4 mb-3 mb-md-0"
+                                    >
+                                        <label class="form-label"
+                                            >Arrival Airport</label
+                                        >
+                                        <select
+                                            id="destination"
+                                            name="destination"
+                                            class="form-control"
+                                            aria-label="Manila"
+                                        >
+                                            <option selected>Siquijor</option>
+                                            <option value="antique">
+                                                Antique
+                                            </option>
+                                            <option value="batanes">
+                                                Batanes
+                                            </option>
+                                            <option value="benguet">
+                                                Benguet
+                                            </option>
+                                            <option value="manila">
+                                                Manila
+                                            </option>
+                                            <option value="quezon">
+                                                Quezon
+                                            </option>
+                                            <option value="samar">Samar</option>
+                                            <option value="siquijor">
+                                                Siquijor
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12 col-md-3 mt-auto">
+                                        <button
+                                            id="flight-search-submit-btn"
+                                            type="button"
+                                            class="btn w-100"
+                                        >
+                                            Search
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center pt-5 pb-md-4 pt-lg-5 pb-lg-3">
+                    <h3>Featured Destinations</h3>
+                </div>
+                <div
+                    id="featured-destination-cards"
+                    class="d-flex flex-column flex-md-row col-10 offset-1 col-md-8 offset-md-2"
+                >
+                    <div
+                        class="col-12 col-md-4 me-0 me-md-2 my-3 my-md-0 common-card text-center flex-fill"
+                    >
+                        <div class="card border-0 bg-transparent rounded-0">
+                            <img
+                                src="./images/batanes-card.png"
+                                class="card-img-top img-fluid"
+                                alt="batanes"
+                            />
+                            <div class="card-body">
+                                <p class="card-text p-1 m-1">
+                                    The wind’s playground
+                                </p>
+                                <h5 class="card-title">Batanes</h5>
+                                <a
+                                    href="./batanes.html"
+                                    class="card-link text-reset text-decoration-none"
+                                >
+                                    <img
+                                        src="./images/next-white.png"
+                                        class="img-fluid arrow-next"
+                                    />
+                                    Hear the wind’s whispers</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="col-12 col-md-4 me-0 mx-md-2 my-3 my-md-0 common-card text-center flex-fill"
+                    >
+                        <div class="card border-0 bg-transparent rounded-0">
+                            <img
+                                src="./images/benguet-card.png"
+                                class="card-img-top img-fluid"
+                                alt="benguet"
+                            />
+                            <div class="card-body">
+                                <p class="card-text p-1 m-1">
+                                    The dwelling of the high god
+                                </p>
+                                <h5 class="card-title">Benguet</h5>
+                                <a
+                                    href="./benguet.html"
+                                    class="card-link text-reset text-decoration-none"
+                                >
+                                    <img
+                                        src="./images/next-white.png"
+                                        class="img-fluid arrow-next"
+                                    />
+                                    Reach the Sea of Clouds</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="col-12 col-md-4 me-0 ms-md-2 my-3 my-md-0 common-card text-center flex-fill"
+                    >
+                        <div class="card border-0 bg-transparent rounded-0">
+                            <img
+                                src="./images/siquijor-card.png"
+                                class="card-img-top img-fluid"
+                                alt="siquijor"
+                            />
+                            <div class="card-body">
+                                <p class="card-text p-1 m-1">
+                                    The Mystic Island
+                                </p>
+                                <h5 class="card-title">Siquijor</h5>
+                                <a
+                                    href="./siquijor.html"
+                                    class="card-link text-reset text-decoration-none"
+                                >
+                                    <img
+                                        src="./images/next-white.png"
+                                        class="img-fluid arrow-next"
+                                    />
+                                    Gaze into the hidden realm</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End of Landing -->
+            <!-- Start of Flights -->
+            <section id="landing-3" class="container-fluid m-0 p-0 text-center">
+                <div
+                    id="landing-3-wrapper"
+                    class="d-flex flex-column justify-content-center align-items-center col-md-8 offset-md-2"
+                >
+                    <h2>Beyond the Horizon, Something Awaits</h2>
+                    <p>
+                        Fly beyond the familiar and discover hidden shores,
+                        storied islands, and places that feel almost imagined.
+                    </p>
+                    <div class="pt-5">
+                        <a href="./flightListings.html">
+                            <button
+                                id="flight-search-submit-btn"
+                                type="button"
+                                class="btn w-100"
+                            >
+                                Book Now
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section id="landing-4">
+                <section id="landing-4-wrapper">
+                    <div
+                        class="text-center mb-5 col-10 offset-1 col-md-8 offset-md-2"
+                    >
+                        <h3 class="mb-1 text-light">
+                            Why Journey With Hiraya?
+                        </h3>
+                        <p class="text-light">
+                            More than a flight—an invitation to discover the
+                            Philippines differently
+                        </p>
+                    </div>
+                    <div
+                        class="d-flex flex-column flex-md-row justify-content-center text-center"
+                    >
+                        <div
+                            class="col-10 offset-1 col-md-3 offset-md-0 py-3 py-md-0"
+                        >
+                            <img
+                                src="images/island-access.jpeg"
+                                alt="island access"
+                                class="rounded-circle img-fluid mb-3"
+                            />
+                            <p id="choice-title" class="mb-0">Island Access</p>
+                        </div>
+                        <div
+                            class="col-10 offset-1 col-md-3 offset-md-0 py-3 py-md-0"
+                        >
+                            <img
+                                src="images/hospitality.jpeg"
+                                alt="hospitality"
+                                class="rounded-circle img-fluid mb-3"
+                            />
+                            <p id="choice-title" class="mb-0">
+                                Filipino Hospitality
+                            </p>
+                        </div>
+                        <div
+                            class="col-10 offset-1 col-md-3 offset-md-0 py-3 py-md-0"
+                        >
+                            <img
+                                src="images/hidden-wonder.jpeg"
+                                alt="wonder"
+                                class="rounded-circle img-fluid mb-3"
+                            />
+
+                            <p id="choice-title" class="mb-0">Hidden Wonders</p>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </main>
+        <footer id="footer-main" class="container-fluid m-0 p-0">
+            <div class="footer-row d-flex flex-column flex-md-row pt-5 pb-2">
+                <div class="footer-column col-10 col-md-2 offset-1 offset-md-2">
+                    <h4>About us</h4>
+                    <ul class="list-unstyled">
+                        <li>About us</li>
+                        <li>Careers</li>
+                        <li>Media Centre</li>
+                        <li>Our planet</li>
+                        <li>Our people</li>
+                        <li>Our communities</li>
+                    </ul>
+                </div>
+
+                <div class="footer-column col-10 col-md-2 offset-1 offset-md-0">
+                    <h4>Help</h4>
+                    <ul class="list-unstyled">
+                        <li>Help and Contact</li>
+                        <li>Travel Updates</li>
+                        <li>Special Assistance</li>
+                        <li>Frequently asked questions</li>
+                    </ul>
+                </div>
+
+                <div class="footer-column col-10 col-md-2 offset-1 offset-md-0">
+                    <h4>Book</h4>
+                    <ul class="list-unstyled">
+                        <li>Book flights</li>
+                        <li>Travel services</li>
+                        <li>Transportation</li>
+                        <li>Planning your trip</li>
+                    </ul>
+                </div>
+
+                <div class="footer-column col-10 col-md-2 offset-1 offset-md-0">
+                    <h4>Manage</h4>
+                    <ul class="list-unstyled">
+                        <li>Check-in</li>
+                        <li>Manage your booking</li>
+                        <li>Chauffeur drive</li>
+                        <li>Flight status</li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="col-10 offset-1 col-md-8 offset-md-2" />
+
+            <div class="footer-row d-flex flex-column flex-md-row py-2">
+                <div class="footer-column col-10 col-md-2 offset-1 offset-md-2">
+                    <h4>Before you fly</h4>
+                    <ul class="list-unstyled">
+                        <li>Baggage</li>
+                        <li>Visa and passport information</li>
+                        <li>Health</li>
+                        <li>Travel information</li>
+                        <li>Rules and notices</li>
+                    </ul>
+                </div>
+
+                <div class="footer-column col-10 col-md-2 offset-1 offset-md-0">
+                    <h4>Where we fly</h4>
+                    <ul class="list-unstyled">
+                        <li>Route map</li>
+                        <li>Luzon</li>
+                        <li>Visayas</li>
+                        <li>Mindanao</li>
+                        <li>The Forgotten Island</li>
+                    </ul>
+                </div>
+
+                <div class="footer-column col-10 col-md-2 offset-1 offset-md-0">
+                    <h4>Experience</h4>
+                    <ul class="list-unstyled">
+                        <li>Cabin features</li>
+                        <li>Shop Hiraya</li>
+                        <li>What's on your flight</li>
+                        <li>Inflight entertainment</li>
+                        <li>Dining</li>
+                        <li>Our lounges</li>
+                        <li>Manila Stopover</li>
+                    </ul>
+                </div>
+
+                <div class="footer-column col-10 col-md-2 offset-1 offset-md-0">
+                    <h4>Loyalty</h4>
+                    <ul class="list-unstyled">
+                        <li>Log in to Hiraya Skywards</li>
+                        <li>Join Hiraya Skywards</li>
+                        <li>Our partners</li>
+                        <li>Business Rewards benefits</li>
+                        <li>Register your company</li>
+                        <li>Hiraya Skywards Programme Rules</li>
+                        <li>Hiraya Skywards Programme Updates</li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="col-10 offset-1 col-md-8 offset-md-2" />
+
+            <div
+                class="footer-row d-flex flex-column flex-md-row pt-3 pb-2 pb-md-5"
+            >
+                <div
+                    class="footer-column col-10 col-md-4 offset-1 offset-md-2 pb-5 pb-md-0"
+                >
+                    <h4 class="mb-3">Subscribe to our special offers</h4>
+                    <p class="my-2">Save with our latest fares and offers.</p>
+                    <p class="mt-2 mb-4">
+                        Unsubscribe or change your preferences
+                    </p>
+
+                    <div class="newsletter d-flex flex-column flex-md-row">
+                        <div class="col-12 col-md-8">
+                            <input
+                                class="form-control me-2"
+                                type="email"
+                                placeholder="Email address"
+                            />
+                        </div>
+                        <div class="col-12 col-md-4 mt-3 mt-md-0">
+                            <button
+                                id="flight-search-submit-btn"
+                                type="button"
+                                class="btn w-100 ms-md-2"
+                            >
+                                Subscribe
+                            </button>
+                        </div>
+                    </div>
+
+                    <p class="privacy-disclaimer my-2 d-none d-md-block">
+                        For details on how we use your information, please see
+                        our privacy policy.
+                    </p>
+                </div>
+
+                <div class="footer-column col-10 col-md-3 offset-1 offset-md-1">
+                    <h4 class="mb-3">Connect with us</h4>
+                    <p class="mt-2 mb-4">Share your Hiraya experience.</p>
+                    <div class="socials d-flex flex-row">
+                        <figure class="mx-3 col-1">
+                            <a href="https://facebook.com" target="_blank">
+                                <img
+                                    src="./images/communication.png"
+                                    alt="facebook"
+                                    class="img-fluid"
+                                />
+                            </a>
+                        </figure>
+                        <figure class="mx-3 col-1">
+                            <a href="https://instagram.com" target="_blank">
+                                <img
+                                    src="./images/instagram.png"
+                                    alt="instagram"
+                                    class="img-fluid"
+                                />
+                            </a>
+                        </figure>
+                        <figure class="mx-3 col-1">
+                            <a href="https://x.com" target="_blank">
+                                <img
+                                    src="./images/twitter.png"
+                                    alt="twitter"
+                                    class="img-fluid"
+                                />
+                            </a>
+                        </figure>
+                        <figure class="mx-3 col-1">
+                            <a href="https://tiktok.com" target="_blank">
+                                <img
+                                    src="./images/tik-tok.png"
+                                    alt="tiktok"
+                                    class="img-fluid"
+                                />
+                            </a>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+
+            <div id="last-footer" class="col-10 offset-1 col-md-8 offset-md-2">
+                <hr class="col-12 col-md-8" />
+
+                <div
+                    class="d-flex flex-column flex-md-row align-items-md-start"
+                >
+                    <div class="col-12 col-md-8">
+                        <ul
+                            class="list-unstyled d-flex flex-column flex-md-row flex-wrap mb-3"
+                        >
+                            <li class="footer-link me-md-3">Contact us</li>
+                            <li class="footer-link mx-md-3">Privacy Policy</li>
+                            <li class="footer-link mx-md-3">
+                                Terms and Conditions
+                            </li>
+                        </ul>
+
+                        <p
+                            id="copyright"
+                            class="my-4 my-md-0 text-center text-md-start"
+                        >
+                            © 2026 The Hiraya Group. All Rights Reserved.
+                        </p>
+                    </div>
+
+                    <div class="d-none d-md-flex col-md-4 justify-content-end">
+                        <div id="footer-logo-wrapper">
+                            <img
+                                src="./images/hirayaLogo.png"
+                                class="img-fluid h-50 w-auto mx-3 mt-3"
+                                alt="Hiraya logo"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>

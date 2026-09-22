@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./index.css" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+            rel="stylesheet"
+        />
+        <title>Hiraya</title>
+    </head>
+    <body>
+        <header>
+            <nav
+                id="navbar"
+                class="navbar navbar-expand-lg navbar-dark bg-dark"
+            >
+                <div class="container-fluid">
+                    <div
+                        id="logo-wrapper"
+                        class="d-flex offset-1 offset-md-2 justify-content-center align-items-end"
+                    >
+                        <div class="d-flex flex-column justify-content-center">
+                            <img
+                                src="./images/hirayaLogoSymbol.png"
+                                class="img-fluid logo-symbol"
+                            />
+                            <img
+                                src="./images/hirayaLogoText.png"
+                                class="img-fluid logo-text mx-3"
+                            />
+                        </div>
+                    </div>
+
+                    <button
+                        class="navbar-toggler ms-auto"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarTogglerDemo01"
+                        aria-controls="navbarTogglerDemo01"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div
+                        class="collapse navbar-collapse"
+                        id="navbarTogglerDemo01"
+                    >
+                        <ul
+                            class="navbar-nav ms-auto mb-2 mb-md-0 text-end text-lg-start"
+                        >
+                            <li class="nav-item mt-3 mt-md-0">
+                                <a
+                                    class="nav-link active px-2 custom-hover-navlink"
+                                    aria-current="page"
+                                    href="./index.html"
+                                    >Home</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link px-2 custom-hover-navlink"
+                                    href="./flightListings.html"
+                                    >Flights</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link px-2 custom-hover-navlink"
+                                    href="./about.html"
+                                    >About</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link px-2 custom-hover-navlink"
+                                    href="./contact.html"
+                                    >Contact</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <section
+                id="common-landing"
+                class="container-fluid m-0 p-0 d-flex flex-column"
+            >
+                <div id="common-landing-heading-wrapper">
+                    <div
+                        id="common-landing-mainheading-wrapper"
+                        class="col-10 offset-1 col-md-8 offset-md-2"
+                    >
+                        <h1>Realms Worth Discovering</h1>
+                    </div>
+                    <div
+                        id="common-landing-subheading-wrapper"
+                        class="col-10 offset-1 col-md-8 offset-md-2"
+                    >
+                        <h3>Seek what lies beyond.</h3>
+                    </div>
+                </div>
+            </section>
+            <section id="flight-listing-content" class="container-fluid">
+                <div
+                    class="d-flex flex-column flex-md-row col-10 offset-1 col-md-8 offset-md-2 pt-5 pb-0 pb-md-3"
+                >
+                    <div
+                        class="justify-content-start my-3 my-md-0 me-0 me-md-3 common-card text-center flex-fill"
+                    >
+                        <div class="card border-0 bg-transparent rounded-0">
+                            <img
+                                src="./images/antique-card.png"
+                                class="card-img-top img-fluid"
+                                alt="antique"
+                            />
+                            <div class="card-body">
+                                <p class="card-text p-1 m-1">
+                                    Power of the Shaman
+                                </p>
+                                <h5 class="card-title">Antique</h5>
+                                <div
+                                    id="specifics-details"
+                                    class="d-flex flex-column flex-md-row justify-content-center pt-3 pt-md-2"
+                                >
+                                    <p class="col-12 col-md-4">
+                                        Departure: Manila - Antique
+                                    </p>
+                                    <span class="d-none d-md-block">|</span>
+                                    <p class="col-12 col-md-3">
+                                        Duration: 1h 20m
+                                    </p>
+                                    <span class="d-none d-md-block">|</span>
+                                    <p class="col-12 col-md-3">
+                                        Starting from: &#8369;2500
+                                    </p>
+                                </div>
+                                <a
+                                    href="./antique.html"
+                                    class="card-link text-reset text-decoration-none"
+                                >
+                                    <img
+                                        src="./images/next-white.png"
+                                        class="img-fluid arrow-next"
+                                    />
+                                    Consult the keeper of the threshold</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="justify-content-end common-card text-center ms-0 ms-md-3 flex-fill"
+                    >
+                        <div class="card border-0 bg-transparent rounded-0">
+                            <img
+                                src="./images/batanes-card.png"
+                                class="card-img-top img-fluid"
+                                alt="batanes"
+                            />
+                            <div class="card-body">
+                                <p class="card-text p-1 m-1">
+                                    The wind’s playground
+                                </p>
+                                <h5 class="card-title">Batanes</h5>
+                                <div
+                                    id="specifics-details"
+                                    class="d-flex flex-column flex-md-row justify-content-center pt-3 pt-md-2"
+                                >
+                                    <p class="col-12 col-md-4">
+                                        Departure: Manila - Batanes
+                                    </p>
+                                    <span class="d-none d-md-block">|</span>
+                                    <p class="col-12 col-md-3">
+                                        Duration: 1h 20m
+                                    </p>
+                                    <span class="d-none d-md-block">|</span>
+                                    <p class="col-12 col-md-3">
+                                        Starting from: &#8369;2500
+                                    </p>
+                                </div>
+
+                                <a
+                                    href="./batanes.html"
+                                    class="card-link text-reset text-decoration-none"
+                                >
+                                    <img
+                                        src="./images/next-white.png"
+                                        class="img-fluid arrow-next"
+                                    />
+                                    Hear the wind’s whispers</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="d-flex flex-column flex-md-row col-10 offset-1 col-md-8 offset-md-2 py-0 py-md-3"
+                >
+                    <div
+                        class="justify-content-start me-0 me-md-3 my-3 my-md-0 common-card text-center flex-fill"
+                    >
+                        <div class="card border-0 bg-transparent rounded-0">
+                            <img
+                                src="./images/benguet-card.png"
+                                class="card-img-top img-fluid"
+                                alt="benguet"
+                            />
+                            <div class="card-body">
+                                <p class="card-text p-1 m-1">
+                                    The dwelling of the high god
+                                </p>
+                                <h5 class="card-title">Benguet</h5>
+                                <div
+                                    id="specifics-details"
+                                    class="d-flex flex-column flex-md-row justify-content-center pt-3 pt-md-2"
+                                >
+                                    <p class="col-12 col-md-4">
+                                        Departure: Manila - Benguet
+                                    </p>
+                                    <span class="d-none d-md-block">|</span>
+                                    <p class="col-12 col-md-3">
+                                        Duration: 1h 20m
+                                    </p>
+                                    <span class="d-none d-md-block">|</span>
+                                    <p class="col-12 col-md-3">
+                                        Starting from: &#8369;2500
+                                    </p>
+                                </div>
+                                <a
+                                    href="./benguet.html"
+                                    class="card-link text-reset text-decoration-none"
+                                >
+                                    <img
+                                        src="./images/next-white.png"
+                                        class="img-fluid arrow-next"
+                                    />
+                                    Reach the Sea of Clouds</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="justify-content-end common-card ms-0 ms-md-3 text-center flex-fill"
+                    >
+                        <div class="card border-0 bg-transparent rounded-0">
+                            <img
+                                src="./images/quezon-card.png"
+                                class="card-img-top img-fluid"
+                                alt="quezon"
+                            />
+                            <div class="card-body">
+                                <p class="card-text p-1 m-1">
+                                    Mt. Banahaw, the Holy Mountain
+                                </p>
+                                <h5 class="card-title">Quezon</h5>
+                                <div
+                                    id="specifics-details"
+                                    class="d-flex flex-column flex-md-row justify-content-center pt-3 pt-md-2"
+                                >
+                                    <p class="col-12 col-md-4">
+                                        Departure: Manila - Quezon
+                                    </p>
+                                    <span class="d-none d-md-block">|</span>
+                                    <p class="col-12 col-md-3">
+                                        Duration: 1h 20m
+                                    </p>
+                                    <span class="d-none d-md-block">|</span>
+                                    <p class="col-12 col-md-3">
+                                        Starting from: &#8369;2500
+                                    </p>
+                                </div>
+                                <a
+                                    href="./quezon.html"
+                                    class="card-link text-reset text-decoration-none"
+                                >
+                                    <img
+                                        src="./images/next-white.png"
+                                        class="img-fluid arrow-next"
+                                    />
+                                    Ascend into the unknown</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="d-flex flex-column flex-md-row col-10 offset-1 col-md-8 offset-md-2 pt-0 pb-3 py-md-3"
+                >
+                    <div
+                        class="justify-content-start me-0 me-md-3 my-3 my-md-0 common-card text-center flex-fill"
+                    >
+                        <div class="card border-0 bg-transparent rounded-0">
+                            <img
+                                src="./images/samar-card.png"
+                                class="card-img-top img-fluid"
+                                alt="samar"
+                            />
+                            <div class="card-body">
+                                <p class="card-text p-1 m-1">
+                                    The Invisible Metropolis
+                                </p>
+                                <h5 class="card-title">Samar</h5>
+                                <div
+                                    id="specifics-details"
+                                    class="d-flex flex-column flex-md-row justify-content-center pt-3 pt-md-2"
+                                >
+                                    <p class="col-12 col-md-4">
+                                        Departure: Manila - Samar
+                                    </p>
+                                    <span class="d-none d-md-block">|</span>
+                                    <p class="col-12 col-md-3">
+                                        Duration: 1h 20m
+                                    </p>
+                                    <span class="d-none d-md-block">|</span>
+                                    <p class="col-12 col-md-3">
+                                        Starting from: &#8369;2500
+                                    </p>
+                                </div>
+                                <a
+                                    href="./samar.html"
+                                    class="card-link text-reset text-decoration-none"
+                                >
+                                    <img
+                                        src="./images/next-white.png"
+                                        class="img-fluid arrow-next"
+                                    />
+                                    Walk among the enchanments</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="justify-content-end common-card ms-0 ms-md-3 text-center flex-fill"
+                    >
+                        <div class="card border-0 bg-transparent rounded-0">
+                            <img
+                                src="./images/siquijor-card.png"
+                                class="card-img-top img-fluid"
+                                alt="siquijor"
+                            />
+                            <div class="card-body">
+                                <p class="card-text p-1 m-1">
+                                    The Mystic Island
+                                </p>
+                                <h5 class="card-title">Siquijor</h5>
+                                <div
+                                    id="specifics-details"
+                                    class="d-flex flex-column flex-md-row justify-content-center pt-3 pt-md-2"
+                                >
+                                    <p class="col-12 col-md-4">
+                                        Departure: Manila - Siquijor
+                                    </p>
+                                    <span class="d-none d-md-block">|</span>
+                                    <p class="col-12 col-md-3">
+                                        Duration: 1h 20m
+                                    </p>
+                                    <span class="d-none d-md-block">|</span>
+                                    <p class="col-12 col-md-3">
+                                        Starting from: &#8369;2500
+                                    </p>
+                                </div>
+                                <a
+                                    href="./siquijor.html"
+                                    class="card-link text-reset text-decoration-none"
+                                >
+                                    <img
+                                        src="./images/next-white.png"
+                                        class="img-fluid arrow-next"
+                                    />
+                                    Gaze into the hidden realm</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer id="footer-subpage" class="container-fluid m-0 p-0">
+            <div
+                id="last-footer-subpage"
+                class="col-10 offset-1 col-md-8 offset-md-2"
+            >
+                <div
+                    class="d-flex flex-column flex-md-row align-items-md-start"
+                >
+                    <div class="col-12 col-md-8 pt-3">
+                        <ul
+                            class="list-unstyled d-flex flex-column flex-md-row flex-wrap mb-3"
+                        >
+                            <li class="footer-link me-md-3">Contact us</li>
+                            <li class="footer-link mx-md-3">Privacy Policy</li>
+                            <li class="footer-link mx-md-3">
+                                Terms and Conditions
+                            </li>
+                        </ul>
+
+                        <p
+                            id="copyright"
+                            class="my-4 my-md-0 text-center text-md-start"
+                        >
+                            © 2026 The Hiraya Group. All Rights Reserved.
+                        </p>
+                    </div>
+
+                    <div class="d-none d-md-flex col-md-4 justify-content-end">
+                        <div id="footer-logo-other-wrapper">
+                            <img
+                                src="./images/hirayaLogo.png"
+                                class="img-fluid h-50 w-auto mx-3 mt-3"
+                                alt="Hiraya logo"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>

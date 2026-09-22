@@ -1,0 +1,546 @@
+@import url("./about.css");
+@import url("./booking.css");
+@import url("./contact.css");
+@import url("./common.css");
+@import url("./flightDetails.css");
+@import url("./flightListings.css");
+
+:root {
+    --bg-dark: #091f1f;
+    --bg-mid: #15304e;
+    --bg-panel: #162248;
+    --cyan: #33e1ff;
+    --pink: #f22fd5;
+    --pink-muted: #b56ae3;
+    --blue: #67b8ff;
+    --text-soft: #aab6c7;
+    --text-light: #f8f7fc;
+    --text-muted: #d5d8e5;
+    --text-success: #64d8b4;
+    --card-title: #efe5fb;
+    --card-bg: #203654;
+    --booking-card-bg: #1b2a38;
+    --font-inter: "Inter", sans-serif;
+    --font-archivo: "Archivo Black", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: var(--bg-dark);
+}
+
+header {
+    position: sticky;
+    z-index: 10;
+    top: 0;
+    overflow: visible;
+}
+
+#navbar {
+    background-color: var(--bg-dark) !important;
+    border-bottom: 5px solid var(--cyan) !important;
+    height: 10vh;
+}
+
+@media screen and (width <= 991px) {
+    #navbar {
+        height: 56px;
+        border-bottom: 3px solid var(--cyan) !important;
+    }
+
+    .navbar-collapse {
+        background-color: var(--bg-dark);
+        width: 100vw;
+        margin-left: calc(50% - 50vw);
+        margin-right: calc(50% - 50vw);
+        padding: 1rem 1.25rem 1.5rem;
+        border-bottom: 3px solid var(--cyan) !important;
+    }
+
+    .navbar-toggler:focus {
+        box-shadow: inset 0 0 0 3px var(--text-soft) !important;
+    }
+
+    .navbar-nav {
+        width: 100%;
+    }
+
+    .navbar-nav .nav-item {
+        width: 100%;
+    }
+
+    .navbar-nav .nav-link {
+        display: block;
+    }
+}
+
+#logo-wrapper {
+    background-color: var(--pink);
+    position: absolute;
+    top: 0;
+    width: 126px;
+    height: 20vh;
+    z-index: 20;
+    transition: height 0.3s ease;
+    animation-timeline: scroll(root block);
+    animation-name: shrink-logo;
+    animation-duration: 1ms;
+    animation-fill-mode: both;
+}
+
+@keyframes shrink-logo {
+    0% {
+        height: 20vh;
+    }
+    100% {
+        height: if(
+            media(orientation: portrait): calc(3vw + 4.5vh) ;
+                else: calc(4.2vw + 2.7vh)
+        );
+    }
+}
+
+#logo-wrapper .logo-symbol {
+    width: auto;
+    height: if(
+        media(orientation: portrait): calc(4vw + 6vh) ;
+            else: calc(3.8vw + 2.5vh)
+    );
+    object-fit: contain;
+    transition: opacity 0.25s ease;
+    opacity: 1;
+    animation-timeline: scroll(root block);
+    animation-name: fade-logo;
+    animation-duration: 1ms;
+    animation-fill-mode: both;
+}
+
+@keyframes fade-logo {
+    0%,
+    30% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+#logo-wrapper .logo-text {
+    margin-bottom: if(
+        media(orientation: portrait): calc(1vw + 0.7vh) ;
+            else: calc(1vw + 0.7vh)
+    );
+}
+
+.custom-hover-navlink:hover {
+    color: var(--blue) !important;
+}
+
+#landing {
+    background:
+        linear-gradient(
+            135deg,
+            rgba(9, 31, 31, 0.7) 0%,
+            rgba(21, 48, 78, 0.7) 35%,
+            rgba(43, 67, 200, 0.7) 68%,
+            rgba(109, 59, 161, 0.7) 100%
+        ),
+        url("./images/heroBanner1.png") center/cover no-repeat;
+    height: if(
+        media(orientation: portrait): calc(30vw + 46vh) ;
+            else: calc(24.2vw + 15.7vh)
+    );
+}
+
+#main-landing-heading-wrapper {
+    padding-top: if(
+        media(orientation: portrait): calc(18vw + 12vh) ;
+            else: calc(5.2vw + 3.4vh)
+    );
+}
+
+#landing-heading-wrapper {
+    padding-top: if(
+        media(orientation: portrait): calc(18vw + 12vh) ;
+            else: calc(7.5vw + 5vh)
+    );
+}
+
+#landing-mainheading-wrapper > h1,
+#landing-subheading-wrapper > h3 {
+    color: var(--text-light) !important;
+    line-height: 100%;
+}
+
+#landing-mainheading-wrapper > h1 {
+    font-family: var(--font-archivo);
+    font-weight: 400;
+    font-size: if(
+        media(orientation: portrait): calc(3vw + 4.5vh) ;
+            else: calc(4.5vw + 3vh)
+    );
+}
+
+#landing-subheading-wrapper > h3 {
+    font-family: var(--font-inter);
+    font-weight: 300;
+    font-size: if(
+        media(orientation: portrait): calc(1vw + 1.5vh) ;
+            else: calc(1.5vw + 1vh)
+    );
+}
+
+#flight-search-btn-wrapper-1,
+#flight-search-btn-wrapper-2,
+#flight-search-btn-wrapper-3,
+#flight-search-btn-wrapper-4 {
+    background-color: var(--bg-panel);
+    border-top: 3px solid var(--cyan);
+    border-bottom: 1px solid var(--cyan);
+    height: 7vh;
+    transition: box-shadow 0.3s ease;
+}
+
+#flight-search-btn-wrapper-1 {
+    border-left: 3px solid var(--cyan);
+    border-right: 0.5px solid var(--cyan);
+    border-top-left-radius: 10px;
+}
+
+#flight-search-btn-wrapper-2,
+#flight-search-btn-wrapper-3 {
+    border-left: 0.5px solid var(--cyan);
+    border-right: 0.25px solid var(--cyan);
+}
+
+#flight-search-btn-wrapper-4 {
+    border-left: 0.5px solid var(--cyan);
+    border-right: 3px solid var(--cyan);
+    border-top-right-radius: 10px;
+}
+
+@media screen and (width < 768px) {
+    #flight-search-btn-wrapper-1 {
+        border-right: 3px solid var(--cyan);
+        border-top-right-radius: 10px;
+    }
+}
+
+#flight-search-btn-wrapper-1:hover,
+#flight-search-btn-wrapper-2:hover,
+#flight-search-btn-wrapper-3:hover,
+#flight-search-btn-wrapper-4:hover {
+    box-shadow: inset 0 -5px 0 0 var(--pink);
+}
+
+:is(
+        #flight-search-btn-wrapper-1,
+        #flight-search-btn-wrapper-2,
+        #flight-search-btn-wrapper-3,
+        #flight-search-btn-wrapper-4
+    ):hover
+    .flight-search-btn {
+    color: var(--pink) !important;
+}
+
+.flight-search-btn {
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    color: var(--text-muted) !important;
+    font-family: var(--font-inter);
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 100%;
+    transition: color 0.3s ease;
+}
+
+#landing-2 {
+    background: linear-gradient(
+        100deg,
+        var(--bg-dark) 0%,
+        var(--bg-mid) 55%,
+        #223e84 100%
+    );
+    height: if(
+        media(orientation: portrait): calc(68vw + 105vh) ;
+            else: calc(30vw + 20vh)
+    );
+}
+
+#landing-2 h3 {
+    font-family: var(--font-archivo);
+    color: var(--card-title);
+}
+
+#flight-search-input-wrapper {
+    background-color: var(--bg-panel);
+    border-left: 3px solid var(--cyan);
+    border-right: 3px solid var(--cyan);
+    border-bottom: 3px solid var(--cyan);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    height: if(
+        media(orientation: portrait): calc(23vw + 15vh) ;
+            else: calc(7.5vw + 5vh)
+    );
+}
+
+.form-label,
+.form-control,
+#flight-search-submit-btn {
+    font-family: var(--font-inter);
+}
+
+.form-label {
+    color: var(--text-muted);
+    font-size: 12px;
+    font-weight: 200;
+    line-height: 100%;
+}
+
+.form-control {
+    background: linear-gradient(100deg, #15304e 0%, #153151 50%);
+    border: 1px solid #005766 !important;
+    border-radius: 5px !important;
+    color: var(--text-muted) !important;
+}
+
+#flight-search-submit-btn {
+    background-color: var(--pink);
+    color: var(--text-muted);
+    font-weight: 600;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+#flight-search-submit-btn:hover {
+    background-color: var(--cyan);
+    color: #070719;
+}
+
+#view-flights-btn {
+    background-color: transparent;
+    border: 2px solid var(--pink);
+    color: var(--pink) !important;
+    font-weight: 600;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+#view-flights-btn:hover {
+    background-color: transparent;
+    border: 1px solid var(--cyan);
+    color: var(--cyan) !important;
+}
+
+#landing-3 {
+    background:
+        linear-gradient(
+            135deg,
+            rgba(9, 31, 31, 0.7) 0%,
+            rgba(21, 48, 78, 0.7) 35%,
+            rgba(43, 67, 200, 0.7) 68%,
+            rgba(109, 59, 161, 0.7) 100%
+        ),
+        url("./images/heroBanner2.png") center/cover no-repeat;
+
+    height: if(
+        media(orientation: portrait): calc(30vw + 46vh) ;
+            else: calc(24.2vw + 15.7vh)
+    );
+}
+
+#landing-3 h2 {
+    font-family: var(--font-archivo);
+    color: var(--card-title);
+    font-size: if(
+        media(orientation: portrait): calc(2vw + 3vh) ; else: calc(3vw + 2vh)
+    );
+}
+
+#landing-3 p {
+    color: var(--card-title);
+    font-family: var(--font-inter);
+    font-weight: 300;
+    font-size: if(
+        media(orientation: portrait): calc(0.78vw + 1.2vh) ;
+            else: calc(1.2vw + 0.78vh)
+    );
+}
+
+#landing-3-wrapper {
+    padding-top: if(
+        media(orientation: portrait): calc(18vw + 12vh) ;
+            else: calc(4vw + 2.65vh)
+    );
+}
+
+#landing-4 {
+    background: linear-gradient(
+        100deg,
+        var(--bg-dark) 0%,
+        var(--bg-mid) 55%,
+        #223e84 100%
+    );
+
+    height: if(
+        media(orientation: portrait): calc(54vw + 83vh) ;
+            else: calc(24.2vw + 15.7vh)
+    );
+}
+
+#landing-4-wrapper {
+    padding-top: if(
+        media(orientation: portrait): calc(12vw + 7.9vh) ;
+            else: calc(4vw + 2.65vh)
+    );
+}
+
+#landing-4 h3 {
+    font-family: var(--font-archivo);
+    color: var(--card-title);
+}
+
+#landing-4 p {
+    color: var(--card-title);
+    font-family: var(--font-inter);
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 100%;
+}
+
+#landing-4 #choice-title {
+    color: var(--card-title);
+    font-family: var(--font-inter);
+    font-weight: 300;
+    font-size: 16px;
+}
+
+#landing-4 img {
+    width: 165px;
+    height: 165px;
+    object-fit: cover;
+}
+
+#footer-main {
+    background-color: #071719;
+    color: var(--text-soft);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 10;
+}
+
+.footer-column > h4 {
+    color: var(--card-title);
+    font-family: var(--font-inter);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 100%;
+}
+
+.footer-column li,
+.footer-column p,
+.footer-links li,
+.footer-column .privacy-disclaimer {
+    color: var(--text-soft);
+    font-family: var(--font-inter);
+    font-weight: 200;
+    line-height: auto;
+}
+
+.footer-column p {
+    color: var(--text-soft);
+    font-family: var(--font-inter);
+    font-weight: 200;
+    line-height: 100%;
+}
+
+.footer-column .privacy-disclaimer {
+    color: var(--text-soft);
+    font-family: var(--font-inter);
+    font-weight: 200;
+    font-size: 12px;
+    line-height: auto;
+}
+
+.footer-column li,
+.footer-links li {
+    list-style: none;
+    font-size: 16px;
+    line-height: auto;
+}
+
+.footer-column li:hover,
+.footer-links li:hover {
+    color: var(--blue) !important;
+    text-decoration: underline;
+}
+
+.footer-column p {
+    margin: 0;
+    padding: 0;
+}
+
+#footer-logo-wrapper {
+    background-color: var(--pink);
+    height: 20vh;
+    z-index: 20;
+}
+
+#footer-logo-other-wrapper {
+    background-color: var(--pink);
+    position: absolute;
+    bottom: 0;
+    height: 20vh;
+    z-index: 20;
+}
+
+#copyright-wrapper {
+    position: relative;
+    height: 17vh;
+}
+
+#last-footer {
+    margin-top: auto;
+}
+
+.footer-link {
+    color: var(--text-soft);
+    font-family: var(--font-inter);
+    font-style: Thin;
+    font-size: 12px;
+    font-weight: 200;
+    line-height: auto;
+}
+
+#copyright {
+    color: var(--text-soft);
+    font-family: var(--font-inter);
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (width <= 576px) {
+    #copyright {
+        font-size: 12px;
+    }
+}
+
+.figure {
+    height: 10vh;
+}

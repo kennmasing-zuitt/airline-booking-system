@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./index.css" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+            rel="stylesheet"
+        />
+        <title>Hiraya</title>
+    </head>
+    <body>
+        <header>
+            <nav
+                id="navbar"
+                class="navbar navbar-expand-lg navbar-dark bg-dark"
+            >
+                <div class="container-fluid">
+                    <div
+                        id="logo-wrapper"
+                        class="d-flex offset-1 offset-md-2 justify-content-center align-items-end"
+                    >
+                        <div class="d-flex flex-column justify-content-center">
+                            <img
+                                src="./images/hirayaLogoSymbol.png"
+                                class="img-fluid logo-symbol"
+                            />
+                            <img
+                                src="./images/hirayaLogoText.png"
+                                class="img-fluid logo-text mx-3"
+                            />
+                        </div>
+                    </div>
+
+                    <button
+                        class="navbar-toggler ms-auto"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarTogglerDemo01"
+                        aria-controls="navbarTogglerDemo01"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div
+                        class="collapse navbar-collapse"
+                        id="navbarTogglerDemo01"
+                    >
+                        <ul
+                            class="navbar-nav ms-auto mb-2 mb-md-0 text-end text-lg-start"
+                        >
+                            <li class="nav-item mt-3 mt-md-0">
+                                <a
+                                    class="nav-link active px-2 custom-hover-navlink"
+                                    aria-current="page"
+                                    href="./index.html"
+                                    >Home</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link px-2 custom-hover-navlink"
+                                    href="./flightListings.html"
+                                    >Flights</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link px-2 custom-hover-navlink"
+                                    href="./about.html"
+                                    >About</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link px-2 custom-hover-navlink"
+                                    href="./contact.html"
+                                    >Contact</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <section
+                id="common-landing"
+                class="container-fluid m-0 p-0 d-flex flex-column"
+            >
+                <div id="common-landing-heading-wrapper">
+                    <div
+                        id="common-landing-mainheading-wrapper"
+                        class="col-10 offset-1 col-md-8 offset-md-2"
+                    >
+                        <h1>Siquijor</h1>
+                    </div>
+                    <div
+                        id="common-landing-subheading-wrapper"
+                        class="col-10 offset-1 col-md-8 offset-md-2"
+                    >
+                        <h3>The Mystic Island.</h3>
+                    </div>
+                    <div
+                        id="common-landing-overview-wrapper"
+                        class="col-10 offset-1 col-md-8 offset-md-2 pt-3"
+                    >
+                        <p>Siquijor is an island shrouded in twilight, a place where the boundary between the natural world and the ancient unseen wears thin. Emerging from the turquoise depths of the Bohol Sea, this coral-formed province has long carried a whisper of the supernatural, earning it the historical moniker Isla del Fuego—the Island of Fire—for the eerie, luminous glow emitted by swarms of fireflies dancing in its nocturnal canopy.</p>
+                    </div>
+                </div>
+            </section>
+            <section
+                id="details-content"
+            >
+                <div>
+                    <div class="d-flex flex-column flex-md-row">
+                        <div
+                            id="details-left"
+                            class="col-10 offset-1 col-md-5 offset-md-2 me-3 mt-3 mb-5 mt-md-5 mb-md-5 order-2 order-md-1"
+                        >
+                            <div id="details-table">
+                                <div class="col-12 pe-0">
+                                    <div class="p-3">
+                                        <h4 class="py-1">Flight Information</h4>
+                                        <hr class="text-light" />
+                                        <table class="table">
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <span
+                                                            class="table-label"
+                                                        >
+                                                            Airline
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span
+                                                            class="table-data"
+                                                        >
+                                                            Hiraya
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span
+                                                            class="table-label"
+                                                        >
+                                                            Departure
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span
+                                                            class="table-data"
+                                                        >
+                                                            September 30, 2026
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <span
+                                                            class="table-label"
+                                                        >
+                                                            Flight Number
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span
+                                                            class="table-data"
+                                                        >
+                                                            KDM 6704
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span
+                                                            class="table-label"
+                                                        >
+                                                            Time
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span
+                                                            class="table-data"
+                                                        >
+                                                            6:20 AM
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <span
+                                                            class="table-label"
+                                                        >
+                                                            Route
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span
+                                                            class="table-data"
+                                                        >
+                                                            Manila - Siquijor
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span
+                                                            class="table-label"
+                                                        >
+                                                            Arrival
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span
+                                                            class="table-data"
+                                                        >
+                                                            8:00 AM
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <span
+                                                            class="table-label"
+                                                        >
+                                                            Aircraft
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span
+                                                            class="table-data"
+                                                        >
+                                                            Airbus A320
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span
+                                                            class="table-label"
+                                                        >
+                                                            Duration
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <span
+                                                            class="table-data"
+                                                        >
+                                                            1h 20m
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="amenities pt-5">
+                                <h4 class="text-light pb-3">Amenities Included</h4>
+                                <div class="d-flex flex-column flex-md-row mb-md-3">
+                                    <div
+                                        class="col-12 col-md-6 me-md-2 common-card text-center flex-fill"
+                                    >
+                                        <div
+                                            class="card border-0 bg-transparent rounded-0"
+                                        >
+                                            <img
+                                                src="./images/luggage-card.png"
+                                                class="card-img-top img-fluid"
+                                                alt="luggage"
+                                            />
+                                            <div class="card-body">
+                                                <h5 class="card-title p-1 m-1">
+                                                    Cabin Baggage
+                                                </h5>
+                                                <p class="card-text">
+                                                    7kg cabin baggage included.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-12 col-md-6 ms-md-2 common-card text-center flex-fill"
+                                    >
+                                        <div
+                                            class="card border-0 bg-transparent rounded-0"
+                                        >
+                                            <img
+                                                src="./images/lounge-card.png"
+                                                class="card-img-top img-fluid"
+                                                alt="lounge"
+                                            />
+                                            <div class="card-body">
+                                                <h5 class="card-title p-1 m-1">
+                                                    Lounge Access
+                                                </h5>
+                                                <p class="card-text">
+                                                    Relax in comfort before your
+                                                    flight.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-column flex-md-row mt-md-3">
+                                    <div
+                                        class="col-12 col-md-6 me-md-2 common-card text-center flex-fill"
+                                    >
+                                        <div
+                                            class="card border-0 bg-transparent rounded-0"
+                                        >
+                                            <img
+                                                src="./images/seat-card.png"
+                                                class="card-img-top img-fluid"
+                                                alt="seat"
+                                            />
+                                            <div class="card-body">
+                                                <h5 class="card-title p-1 m-1">
+                                                    Comfort Seating
+                                                </h5>
+                                                <p class="card-text">
+                                                    Ergonomic seats for a
+                                                    relaxing trip.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-12 col-md-6 ms-md-2 common-card text-center flex-fill"
+                                    >
+                                        <div
+                                            class="card border-0 bg-transparent rounded-0"
+                                        >
+                                            <img
+                                                src="./images/meal-card.png"
+                                                class="card-img-top img-fluid"
+                                                alt="meal"
+                                            />
+                                            <div class="card-body">
+                                                <h5 class="card-title p-1 m-1">
+                                                    Complimentary Meal
+                                                </h5>
+                                                <p class="card-text">
+                                                    Enjoy meals during your
+                                                    flight.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            id="booking-summary"
+                            class="col-10 offset-1 col-md-3 offset-md-0 ms-md-3 mt-5 mb-3 mt-md-5 mb-md-5 order-1 order-md-2"
+                        >
+                            <div
+                                id="booking-card"
+                                class="card border-0 bg-transparent rounded-5"
+                            >
+                                <div class="card-header px-3">
+                                    <h4 class="pt-3">Booking Summary</h4>
+                                    <hr class="text-light" />
+                                </div>
+                                <div class="card-body">
+                                    <h4 class="price">&#8369;2500</h4>
+                                    <p class="disclaimer pb-3">Economy Class</p>
+                                    <hr class="text-light" />
+                                    <div>
+                                        <div class="pb-3">
+                                            <img
+                                                src="./images/siquijor-details.png"
+                                                class="img-fluid"
+                                            />
+                                        </div>
+                                        <div class="pb-2">
+                                            <span class="card-link"
+                                                >Flight</span
+                                            >
+                                            <h4 class="card-title">Siquijor</h4>
+                                        </div>
+                                        <div class="py-2">
+                                            <span class="card-link">Route</span>
+                                            <h4 class="card-title">
+                                                Manila - Siquijor
+                                            </h4>
+                                        </div>
+                                        <div class="py-2">
+                                            <span class="card-link"
+                                                >Departure Date</span
+                                            >
+                                            <h4 class="card-title">
+                                                September 30, 2026
+                                            </h4>
+                                        </div>
+                                        <div class="py-2">
+                                            <span class="card-link"
+                                                >Duration</span
+                                            >
+                                            <h4 class="card-title">1h 20m</h4>
+                                        </div>
+                                    </div>
+                                    <div class="pt-3 pb-1">
+                                        <a href="./bookingSiquijor.html">
+                                            <button
+                                                id="flight-search-submit-btn"
+                                                type="button"
+                                                class="btn w-100"
+                                            >
+                                                Book Flight
+                                            </button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer id="footer-subpage" class="container-fluid m-0 p-0">
+            <div
+                id="last-footer-subpage"
+                class="col-10 offset-1 col-md-8 offset-md-2"
+            >
+                <div
+                    class="d-flex flex-column flex-md-row align-items-md-start"
+                >
+                    <div class="col-12 col-md-8 pt-3">
+                        <ul
+                            class="list-unstyled d-flex flex-column flex-md-row flex-wrap mb-3"
+                        >
+                            <li class="footer-link me-md-3">Contact us</li>
+                            <li class="footer-link mx-md-3">Privacy Policy</li>
+                            <li class="footer-link mx-md-3">
+                                Terms and Conditions
+                            </li>
+                        </ul>
+
+                        <p
+                            id="copyright"
+                            class="my-4 my-md-0text-center text-md-start"
+                        >
+                            © 2026 The Hiraya Group. All Rights Reserved.
+                        </p>
+                    </div>
+
+                    <div class="d-none d-md-flex col-md-4 justify-content-end">
+                        <div id="footer-logo-other-wrapper">
+                            <img
+                                src="./images/hirayaLogo.png"
+                                class="img-fluid h-50 w-auto mx-3 mt-3"
+                                alt="Hiraya logo"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+#contact-content {
+    background: linear-gradient(
+        100deg,
+        var(--bg-dark) 0%,
+        var(--bg-mid) 55%,
+        #223e84 100%
+    ) !important;
+    min-height: 100vh;
+    height: auto;
+    overflow-y: visible;
+}
+
+#contact-content h4 {
+    color: var(--card-title);
+    font-family: var(--font-inter);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 100%;
+}
+
+#contact-content h5 {
+    color: var(--card-title);
+    font-family: var(--font-inter);
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 100%;
+}

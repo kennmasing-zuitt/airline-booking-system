@@ -1,0 +1,59 @@
+
+
+#about-content {
+    background: linear-gradient(
+        100deg,
+        var(--bg-dark) 0%,
+        var(--bg-mid) 55%,
+        #223e84 100%
+    );
+    min-height: 100vh;
+    height: auto;
+    overflow-y: visible;
+}
+
+#about-content p {
+    color: var(--text-muted) !important;
+    font-family: var(--font-inter);
+    font-size: 16px;
+    font-style: Regular !important;
+    font-weight: 400;
+    line-height: 130%;
+}
+
+#about-content .about-cta {
+    color: var(--text-muted) !important;
+    font-family: var(--font-inter);
+    font-size: 16px;
+    font-style: Italic !important;
+    font-weight: 200;
+    line-height: auto;
+}
+
+#about-content h4 {
+    color: var(--card-title);
+    font-family: var(--font-inter);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 100%;
+}
+
+#about-content .card-link {
+    color: var(--text-muted) !important;
+    font-family: var(--font-inter);
+    font-size: 12px;
+    font-style: Light !important;
+    font-weight: 300;
+    line-height: 100%;
+}
+
+#about-content hr {
+    color: var(--text-muted);
+}
+
+#about-cards {
+    padding-bottom: if(
+        media(orientation: portrait): calc(2vw + 3vh) ;
+            else: calc(3vw + 2vh)
+    );
+}

@@ -1,0 +1,97 @@
+#booking-content {
+    background: linear-gradient(
+        100deg,
+        var(--bg-dark) 0%,
+        var(--bg-mid) 55%,
+        #223e84 100%
+    );
+    min-height: 100vh;
+    height: auto;
+    overflow-y: visible;
+}
+
+#booking-form {
+    background-color: var(--bg-panel) !important;
+    border: 3px solid var(--cyan);
+    border-radius: 10px;
+}
+
+#booking-form h4 {
+    color: var(--card-title) !important;
+    font-family: var(--font-inter);
+    font-size: 24px;
+    font-style: Medium !important;
+    font-weight: 500;
+    line-height: 100%;
+}
+
+#booking-summary .card-link {
+    color: var(--text-muted) !important;
+    font-family: var(--font-inter);
+    font-size: 12px;
+    font-style: Light !important;
+    font-weight: 300;
+    line-height: 100%;
+}
+
+#booking-summary .card-title {
+    color: var(--card-title) !important;
+    font-family: var(--font-inter);
+    font-size: 18px;
+    font-style: Medium !important;
+    font-weight: 500;
+    line-height: 100%;
+}
+
+#booking-summary {
+    background-color: var(--booking-card-bg) !important;
+    border: 3px solid var(--pink);
+    border-radius: 10px;
+
+    min-height: 50vh;
+    height: auto;
+    overflow-y: visible;
+}
+
+#booking-card {
+    background-color: var(--booking-card-bg) !important;
+}
+
+#booking-card .card-header {
+    background-color: none !important;
+    border-bottom: none !important;
+    color: var(--card-title) !important;
+    padding: 0;
+    margin: 0;
+}
+
+#booking-card .card-footer {
+    background-color: none !important;
+    border-top: none !important;
+    padding: 0;
+    margin: 0;
+}
+
+#booking-card .card-footer h4 {
+    color: var(--text-success) !important;
+    font-family: var(--font-inter);
+    font-size: 24px;
+    font-style: Medium !important;
+    font-weight: 800;
+    line-height: 100%;
+}
+
+#booking-card .card-footer p {
+    color: var(--text-success) !important;
+    font-family: var(--font-inter);
+    font-size: 12px;
+    font-style: Light !important;
+    font-weight: 300;
+    line-height: 100%;
+}
+
+#booking-content {
+    padding-bottom: if(
+        media(orientation: portrait): calc(2vw + 3vh) ; else: calc(3vw + 2vh)
+    );
+}
