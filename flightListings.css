@@ -11,10 +11,13 @@
 }
 
 #flight-listing-content {
-    padding-bottom: if(
-        media(orientation: portrait): calc(3vw + 4.5vh) ;
-            else: calc(4.5vw + 3vh)
-    );
+    padding-bottom: calc(4.5vw + 3vh);
+}
+
+@media (orientation: portrait) {
+    #flight-listing-content {
+        padding-bottom: calc(3vw + 4.5vh);
+    }
 }
 
 #specifics-details {

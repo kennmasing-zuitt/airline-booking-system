@@ -52,8 +52,11 @@
 }
 
 #about-cards {
-    padding-bottom: if(
-        media(orientation: portrait): calc(2vw + 3vh) ;
-            else: calc(3vw + 2vh)
-    );
+    padding-bottom: calc(3vw + 2vh);
+}
+
+@media (orientation: portrait) {
+    #about-cards {
+        padding-bottom: calc(2vw + 3vh);
+    }
 }

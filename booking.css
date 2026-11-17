@@ -91,7 +91,11 @@
 }
 
 #booking-content {
-    padding-bottom: if(
-        media(orientation: portrait): calc(2vw + 3vh) ; else: calc(3vw + 2vh)
-    );
+    padding-bottom: calc(3vw + 2vh);
+}
+
+@media (orientation: portrait) {
+    #booking-content {
+        padding-bottom: calc(2vw + 3vh);
+    }
 }
