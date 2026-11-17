@@ -155,7 +155,7 @@ header {
             rgba(43, 67, 200, 0.7) 68%,
             rgba(109, 59, 161, 0.7) 100%
         ),
-        url("./images/heroBanner1.png") center/cover no-repeat;
+        url("./images/heroBanner1.webp") center/cover no-repeat;
     height: calc(24.2vw + 15.7vh);
 }
 
@@ -377,7 +377,7 @@ header {
             rgba(43, 67, 200, 0.7) 68%,
             rgba(109, 59, 161, 0.7) 100%
         ),
-        url("./images/heroBanner2.png") center/cover no-repeat;
+        url("./images/heroBanner2.webp") center/cover no-repeat;
 
     height: calc(24.2vw + 15.7vh);
 }
