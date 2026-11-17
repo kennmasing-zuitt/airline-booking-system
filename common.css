@@ -7,12 +7,12 @@
         rgba(109, 59, 161, 1) 100%
     );
 
-    height: calc(24.2vw + 15.7vh);
+    min-height: calc(24.2vw + 15.7vh);
 }
 
 @media (orientation: portrait) {
     #common-landing {
-        height: calc(30vw + 46vh);
+        min-height: calc(30vw + 46vh);
     }
 }
 
@@ -58,7 +58,6 @@
 
 #common-landing-overview-wrapper > p {
     color: var(--text-muted) !important;
-    line-height: auto;
     font-family: var(--font-inter);
     font-weight: 200;
     font-size: calc(0.9vw + 0.6vh);
@@ -78,7 +77,6 @@
     color: var(--card-title) !important;
     font-family: var(--font-inter);
     font-size: 18px;
-    font-style: Medium !important;
     font-weight: 500;
     line-height: 100%;
 }
@@ -87,7 +85,6 @@
     color: var(--text-muted) !important;
     font-family: var(--font-inter);
     font-size: 10px;
-    font-style: Light !important;
     font-weight: 300;
     line-height: 100%;
 }
@@ -96,7 +93,6 @@
     color: var(--text-muted) !important;
     font-family: var(--font-inter);
     font-size: 12px;
-    font-style: Light !important;
     font-weight: 300;
     line-height: 100%;
 }

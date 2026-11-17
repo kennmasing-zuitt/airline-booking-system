@@ -32,10 +32,12 @@
                         <div class="d-flex flex-column justify-content-center">
                             <img
                                 src="./images/hirayaLogoSymbol.png"
+                                alt=""
                                 class="img-fluid logo-symbol"
                             />
                             <img
                                 src="./images/hirayaLogoText.png"
+                                alt="Hiraya"
                                 class="img-fluid logo-text mx-3"
                             />
                         </div>
@@ -116,25 +118,13 @@
                 </div>
                 <div class="d-flex flex-row">
                     <div class="offset-1 offset-md-2 pt-3">
-                        <a href="./bookingSiquijor.html">
-                            <button
-                                id="flight-search-submit-btn"
-                                type="button"
-                                class="btn w-100"
-                            >
-                                Book Now
-                            </button>
+                        <a href="./flightListings.html" class="btn w-100 flight-search-submit-btn">
+                            Book Now
                         </a>
                     </div>
                     <div class="pt-3 ms-3">
-                        <a href="./flightListings.html">
-                            <button
-                                id="view-flights-btn"
-                                type="button"
-                                class="btn w-100"
-                            >
-                                View Flights
-                            </button>
+                        <a href="./flightListings.html" id="view-flights-btn" class="btn w-100">
+                            View Flights
                         </a>
                     </div>
                 </div>
@@ -147,7 +137,7 @@
                             id="flight-search-btn-wrapper-1"
                             class="flex-fill d-flex justify-content-center align-items-center"
                         >
-                            <button class="flight-search-btn">
+                            <button type="button" class="flight-search-btn">
                                 Start a new search
                             </button>
                         </div>
@@ -155,7 +145,12 @@
                             id="flight-search-btn-wrapper-2"
                             class="flex-fill d-none d-md-flex justify-content-center align-items-center"
                         >
-                            <button class="flight-search-btn">
+                            <button
+                                type="button"
+                                class="flight-search-btn"
+                                disabled
+                                title="Coming soon"
+                            >
                                 Manage Booking
                             </button>
                         </div>
@@ -163,13 +158,23 @@
                             id="flight-search-btn-wrapper-3"
                             class="flex-fill d-none d-md-flex justify-content-center align-items-center"
                         >
-                            <button class="flight-search-btn">Check-in</button>
+                            <button
+                                type="button"
+                                class="flight-search-btn"
+                                disabled
+                                title="Coming soon"
+                            >Check-in</button>
                         </div>
                         <div
                             id="flight-search-btn-wrapper-4"
                             class="flex-fill d-none d-md-flex justify-content-center align-items-center"
                         >
-                            <button class="flight-search-btn">
+                            <button
+                                type="button"
+                                class="flight-search-btn"
+                                disabled
+                                title="Coming soon"
+                            >
                                 Flight Status
                             </button>
                         </div>
@@ -189,20 +194,19 @@
                             >
                                 <form
                                     class="d-flex flex-column flex-md-row justify-content-around"
+                                    action="./flightListings.html"
                                 >
                                     <div
                                         class="form-group col-12 col-md-4 align-items-center"
                                     >
-                                        <label class="form-label"
+                                        <label class="form-label" for="from"
                                             >Departure Airport</label
                                         >
                                         <select
                                             id="from"
                                             name="from"
                                             class="form-control"
-                                            aria-label="Manila"
                                         >
-                                            <option selected>Manila</option>
                                             <option value="antique">
                                                 Antique
                                             </option>
@@ -212,7 +216,7 @@
                                             <option value="benguet">
                                                 Benguet
                                             </option>
-                                            <option value="manila">
+                                            <option value="manila" selected>
                                                 Manila
                                             </option>
                                             <option value="quezon">
@@ -227,16 +231,14 @@
                                     <div
                                         class="form-group col-12 col-md-4 mb-3 mb-md-0"
                                     >
-                                        <label class="form-label"
+                                        <label class="form-label" for="destination"
                                             >Arrival Airport</label
                                         >
                                         <select
                                             id="destination"
                                             name="destination"
                                             class="form-control"
-                                            aria-label="Manila"
                                         >
-                                            <option selected>Siquijor</option>
                                             <option value="antique">
                                                 Antique
                                             </option>
@@ -253,16 +255,15 @@
                                                 Quezon
                                             </option>
                                             <option value="samar">Samar</option>
-                                            <option value="siquijor">
+                                            <option value="siquijor" selected>
                                                 Siquijor
                                             </option>
                                         </select>
                                     </div>
                                     <div class="col-12 col-md-3 mt-auto">
                                         <button
-                                            id="flight-search-submit-btn"
-                                            type="button"
-                                            class="btn w-100"
+                                            type="submit"
+                                            class="btn w-100 flight-search-submit-btn"
                                         >
                                             Search
                                         </button>
@@ -299,6 +300,7 @@
                                 >
                                     <img
                                         src="./images/next-white.png"
+                                        alt=""
                                         class="img-fluid arrow-next"
                                     />
                                     Hear the wind’s whispers</a
@@ -326,6 +328,7 @@
                                 >
                                     <img
                                         src="./images/next-white.png"
+                                        alt=""
                                         class="img-fluid arrow-next"
                                     />
                                     Reach the Sea of Clouds</a
@@ -353,6 +356,7 @@
                                 >
                                     <img
                                         src="./images/next-white.png"
+                                        alt=""
                                         class="img-fluid arrow-next"
                                     />
                                     Gaze into the hidden realm</a
@@ -375,14 +379,8 @@
                         storied islands, and places that feel almost imagined.
                     </p>
                     <div class="pt-5">
-                        <a href="./flightListings.html">
-                            <button
-                                id="flight-search-submit-btn"
-                                type="button"
-                                class="btn w-100"
-                            >
-                                Book Now
-                            </button>
+                        <a href="./flightListings.html" class="btn w-100 flight-search-submit-btn">
+                            Book Now
                         </a>
                     </div>
                 </div>
@@ -411,7 +409,7 @@
                                 alt="island access"
                                 class="rounded-circle img-fluid mb-3"
                             />
-                            <p id="choice-title" class="mb-0">Island Access</p>
+                            <p class="choice-title mb-0">Island Access</p>
                         </div>
                         <div
                             class="col-10 offset-1 col-md-3 offset-md-0 py-3 py-md-0"
@@ -421,7 +419,7 @@
                                 alt="hospitality"
                                 class="rounded-circle img-fluid mb-3"
                             />
-                            <p id="choice-title" class="mb-0">
+                            <p class="choice-title mb-0">
                                 Filipino Hospitality
                             </p>
                         </div>
@@ -434,7 +432,7 @@
                                 class="rounded-circle img-fluid mb-3"
                             />
 
-                            <p id="choice-title" class="mb-0">Hidden Wonders</p>
+                            <p class="choice-title mb-0">Hidden Wonders</p>
                         </div>
                     </div>
                 </section>
@@ -445,7 +443,7 @@
                 <div class="footer-column col-10 col-md-2 offset-1 offset-md-2">
                     <h4>About us</h4>
                     <ul class="list-unstyled">
-                        <li>About us</li>
+                        <li><a href="./about.html">About us</a></li>
                         <li>Careers</li>
                         <li>Media Centre</li>
                         <li>Our planet</li>
@@ -457,7 +455,7 @@
                 <div class="footer-column col-10 col-md-2 offset-1 offset-md-0">
                     <h4>Help</h4>
                     <ul class="list-unstyled">
-                        <li>Help and Contact</li>
+                        <li><a href="./contact.html">Help and Contact</a></li>
                         <li>Travel Updates</li>
                         <li>Special Assistance</li>
                         <li>Frequently asked questions</li>
@@ -467,7 +465,7 @@
                 <div class="footer-column col-10 col-md-2 offset-1 offset-md-0">
                     <h4>Book</h4>
                     <ul class="list-unstyled">
-                        <li>Book flights</li>
+                        <li><a href="./flightListings.html">Book flights</a></li>
                         <li>Travel services</li>
                         <li>Transportation</li>
                         <li>Planning your trip</li>
@@ -551,24 +549,29 @@
                         Unsubscribe or change your preferences
                     </p>
 
-                    <div class="newsletter d-flex flex-column flex-md-row">
+                    <form
+                        class="newsletter d-flex flex-column flex-md-row"
+                        action="./confirmation.html"
+                    >
                         <div class="col-12 col-md-8">
                             <input
                                 class="form-control me-2"
                                 type="email"
+                                name="email"
+                                aria-label="Email address"
                                 placeholder="Email address"
+                                required
                             />
                         </div>
                         <div class="col-12 col-md-4 mt-3 mt-md-0">
                             <button
-                                id="flight-search-submit-btn"
-                                type="button"
-                                class="btn w-100 ms-md-2"
+                                type="submit"
+                                class="btn w-100 ms-md-2 flight-search-submit-btn"
                             >
                                 Subscribe
                             </button>
                         </div>
-                    </div>
+                    </form>
 
                     <p class="privacy-disclaimer my-2 d-none d-md-block">
                         For details on how we use your information, please see
@@ -630,7 +633,9 @@
                         <ul
                             class="list-unstyled d-flex flex-column flex-md-row flex-wrap mb-3"
                         >
-                            <li class="footer-link me-md-3">Contact us</li>
+                            <li class="footer-link me-md-3">
+                                <a href="./contact.html">Contact us</a>
+                            </li>
                             <li class="footer-link mx-md-3">Privacy Policy</li>
                             <li class="footer-link mx-md-3">
                                 Terms and Conditions

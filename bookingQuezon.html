@@ -32,10 +32,12 @@
                         <div class="d-flex flex-column justify-content-center">
                             <img
                                 src="./images/hirayaLogoSymbol.png"
+                                alt=""
                                 class="img-fluid logo-symbol"
                             />
                             <img
                                 src="./images/hirayaLogoText.png"
+                                alt="Hiraya"
                                 class="img-fluid logo-text mx-3"
                             />
                         </div>
@@ -122,7 +124,7 @@
                         class="col-10 offset-1 col-md-5 offset-md-2 me-3 mt-3 mb-5 mt-md-5 mb-md-5 order-2 order-md-1"         
                     >
                         <div id="booking-form" class="col-12 pe-0">
-                            <form class="p-3">
+                            <form class="p-3" action="./confirmation.html">
                                 <h4 class="py-1">Passenger Information</h4>
                                 <hr class="text-light" />
                                 <div class="d-flex flex-column flex-md-row">
@@ -136,6 +138,8 @@
                                             class="form-control"
                                             type="text"
                                             id="lastName"
+                                            name="lastName"
+                                            required
                                             placeholder="Dela Cruz"
                                         />
                                     </div>
@@ -150,7 +154,9 @@
                                         <input
                                             class="form-control"
                                             type="text"
-                                            id="first Name"
+                                            id="firstName"
+                                            name="firstName"
+                                            required
                                             placeholder="Juan"
                                         />
                                     </div>
@@ -168,6 +174,7 @@
                                             class="form-control"
                                             type="text"
                                             id="middleName"
+                                            name="middleName"
                                             placeholder="D"
                                         />
                                     </div>
@@ -183,6 +190,8 @@
                                             class="form-control"
                                             type="date"
                                             id="birthDate"
+                                            name="birthDate"
+                                            required
                                         />
                                     </div>
                                 </div>
@@ -197,6 +206,8 @@
                                             class="form-control"
                                             type="email"
                                             id="email"
+                                            name="email"
+                                            required
                                             placeholder="name@example.com"
                                         />
                                     </div>
@@ -210,8 +221,10 @@
                                         >
                                         <input
                                             class="form-control"
-                                            type="number"
+                                            type="tel"
                                             id="contactNo"
+                                            name="contactNo"
+                                            required
                                             placeholder="+63 900 000 000"
                                         />
                                     </div>
@@ -229,9 +242,8 @@
                                 </div>
                                 <div class="pt-2">
                                     <button
-                                        id="flight-search-submit-btn"
-                                        type="button"
-                                        class="btn w-100"
+                                        type="submit"
+                                        class="btn w-100 flight-search-submit-btn"
                                     >
                                         Send
                                     </button>
@@ -257,6 +269,7 @@
                                     <div class="pb-3">
                                         <img
                                             src="./images/quezon-details.webp"
+                                            alt="Quezon scenery"
                                             class="img-fluid"
                                         />
                                     </div>
@@ -306,7 +319,9 @@
                         <ul
                             class="list-unstyled d-flex flex-column flex-md-row flex-wrap mb-3"
                         >
-                            <li class="footer-link me-md-3">Contact us</li>
+                            <li class="footer-link me-md-3">
+                                <a href="./contact.html">Contact us</a>
+                            </li>
                             <li class="footer-link mx-md-3">Privacy Policy</li>
                             <li class="footer-link mx-md-3">
                                 Terms and Conditions
