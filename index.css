@@ -22,6 +22,7 @@
     --booking-card-bg: #1b2a38;
     --font-inter: "Inter", sans-serif;
     --font-archivo: "Archivo Black", sans-serif;
+    --logo-shrunk-height: calc(4.2vw + 2.7vh);
 }
 
 * {
@@ -99,19 +100,19 @@ header {
         height: 20vh;
     }
     100% {
-        height: if(
-            media(orientation: portrait): calc(3vw + 4.5vh) ;
-                else: calc(4.2vw + 2.7vh)
-        );
+        height: var(--logo-shrunk-height);
+    }
+}
+
+@media (orientation: portrait) {
+    :root {
+        --logo-shrunk-height: calc(3vw + 4.5vh);
     }
 }
 
 #logo-wrapper .logo-symbol {
     width: auto;
-    height: if(
-        media(orientation: portrait): calc(4vw + 6vh) ;
-            else: calc(3.8vw + 2.5vh)
-    );
+    height: calc(3.8vw + 2.5vh);
     object-fit: contain;
     transition: opacity 0.25s ease;
     opacity: 1;
@@ -119,6 +120,12 @@ header {
     animation-name: fade-logo;
     animation-duration: 1ms;
     animation-fill-mode: both;
+}
+
+@media (orientation: portrait) {
+    #logo-wrapper .logo-symbol {
+        height: calc(4vw + 6vh);
+    }
 }
 
 @keyframes fade-logo {
@@ -132,10 +139,7 @@ header {
 }
 
 #logo-wrapper .logo-text {
-    margin-bottom: if(
-        media(orientation: portrait): calc(1vw + 0.7vh) ;
-            else: calc(1vw + 0.7vh)
-    );
+    margin-bottom: calc(1vw + 0.7vh);
 }
 
 .custom-hover-navlink:hover {
@@ -151,25 +155,24 @@ header {
             rgba(43, 67, 200, 0.7) 68%,
             rgba(109, 59, 161, 0.7) 100%
         ),
-        url("./images/heroBanner1.png") center/cover no-repeat;
-    height: if(
-        media(orientation: portrait): calc(30vw + 46vh) ;
-            else: calc(24.2vw + 15.7vh)
-    );
+        url("./images/heroBanner1.webp") center/cover no-repeat;
+    min-height: calc(24.2vw + 15.7vh);
+}
+
+@media (orientation: portrait) {
+    #landing {
+        min-height: calc(30vw + 46vh);
+    }
 }
 
 #main-landing-heading-wrapper {
-    padding-top: if(
-        media(orientation: portrait): calc(18vw + 12vh) ;
-            else: calc(5.2vw + 3.4vh)
-    );
+    padding-top: calc(5.2vw + 3.4vh);
 }
 
-#landing-heading-wrapper {
-    padding-top: if(
-        media(orientation: portrait): calc(18vw + 12vh) ;
-            else: calc(7.5vw + 5vh)
-    );
+@media (orientation: portrait) {
+    #main-landing-heading-wrapper {
+        padding-top: calc(18vw + 12vh);
+    }
 }
 
 #landing-mainheading-wrapper > h1,
@@ -181,19 +184,25 @@ header {
 #landing-mainheading-wrapper > h1 {
     font-family: var(--font-archivo);
     font-weight: 400;
-    font-size: if(
-        media(orientation: portrait): calc(3vw + 4.5vh) ;
-            else: calc(4.5vw + 3vh)
-    );
+    font-size: calc(4.5vw + 3vh);
+}
+
+@media (orientation: portrait) {
+    #landing-mainheading-wrapper > h1 {
+        font-size: calc(3vw + 4.5vh);
+    }
 }
 
 #landing-subheading-wrapper > h3 {
     font-family: var(--font-inter);
     font-weight: 300;
-    font-size: if(
-        media(orientation: portrait): calc(1vw + 1.5vh) ;
-            else: calc(1.5vw + 1vh)
-    );
+    font-size: calc(1.5vw + 1vh);
+}
+
+@media (orientation: portrait) {
+    #landing-subheading-wrapper > h3 {
+        font-size: calc(1vw + 1.5vh);
+    }
 }
 
 #flight-search-btn-wrapper-1,
@@ -245,8 +254,13 @@ header {
         #flight-search-btn-wrapper-3,
         #flight-search-btn-wrapper-4
     ):hover
-    .flight-search-btn {
+    .flight-search-btn:not(:disabled) {
     color: var(--pink) !important;
+}
+
+.flight-search-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
 }
 
 .flight-search-btn {
@@ -269,10 +283,13 @@ header {
         var(--bg-mid) 55%,
         #223e84 100%
     );
-    height: if(
-        media(orientation: portrait): calc(68vw + 105vh) ;
-            else: calc(30vw + 20vh)
-    );
+    min-height: calc(30vw + 20vh);
+}
+
+@media (orientation: portrait) {
+    #landing-2 {
+        min-height: calc(68vw + 105vh);
+    }
 }
 
 #landing-2 h3 {
@@ -287,15 +304,18 @@ header {
     border-bottom: 3px solid var(--cyan);
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    height: if(
-        media(orientation: portrait): calc(23vw + 15vh) ;
-            else: calc(7.5vw + 5vh)
-    );
+    min-height: calc(7.5vw + 5vh);
+}
+
+@media (orientation: portrait) {
+    #flight-search-input-wrapper {
+        min-height: calc(23vw + 15vh);
+    }
 }
 
 .form-label,
 .form-control,
-#flight-search-submit-btn {
+.btn.flight-search-submit-btn {
     font-family: var(--font-inter);
 }
 
@@ -313,7 +333,7 @@ header {
     color: var(--text-muted) !important;
 }
 
-#flight-search-submit-btn {
+.btn.flight-search-submit-btn {
     background-color: var(--pink);
     color: var(--text-muted);
     font-weight: 600;
@@ -322,7 +342,7 @@ header {
         color 0.3s ease;
 }
 
-#flight-search-submit-btn:hover {
+.btn.flight-search-submit-btn:hover {
     background-color: var(--cyan);
     color: #070719;
 }
@@ -352,37 +372,50 @@ header {
             rgba(43, 67, 200, 0.7) 68%,
             rgba(109, 59, 161, 0.7) 100%
         ),
-        url("./images/heroBanner2.png") center/cover no-repeat;
+        url("./images/heroBanner2.webp") center/cover no-repeat;
 
-    height: if(
-        media(orientation: portrait): calc(30vw + 46vh) ;
-            else: calc(24.2vw + 15.7vh)
-    );
+    min-height: calc(24.2vw + 15.7vh);
+}
+
+@media (orientation: portrait) {
+    #landing-3 {
+        min-height: calc(30vw + 46vh);
+    }
 }
 
 #landing-3 h2 {
     font-family: var(--font-archivo);
     color: var(--card-title);
-    font-size: if(
-        media(orientation: portrait): calc(2vw + 3vh) ; else: calc(3vw + 2vh)
-    );
+    font-size: calc(3vw + 2vh);
+}
+
+@media (orientation: portrait) {
+    #landing-3 h2 {
+        font-size: calc(2vw + 3vh);
+    }
 }
 
 #landing-3 p {
     color: var(--card-title);
     font-family: var(--font-inter);
     font-weight: 300;
-    font-size: if(
-        media(orientation: portrait): calc(0.78vw + 1.2vh) ;
-            else: calc(1.2vw + 0.78vh)
-    );
+    font-size: calc(1.2vw + 0.78vh);
+}
+
+@media (orientation: portrait) {
+    #landing-3 p {
+        font-size: calc(0.78vw + 1.2vh);
+    }
 }
 
 #landing-3-wrapper {
-    padding-top: if(
-        media(orientation: portrait): calc(18vw + 12vh) ;
-            else: calc(4vw + 2.65vh)
-    );
+    padding-top: calc(4vw + 2.65vh);
+}
+
+@media (orientation: portrait) {
+    #landing-3-wrapper {
+        padding-top: calc(18vw + 12vh);
+    }
 }
 
 #landing-4 {
@@ -393,17 +426,23 @@ header {
         #223e84 100%
     );
 
-    height: if(
-        media(orientation: portrait): calc(54vw + 83vh) ;
-            else: calc(24.2vw + 15.7vh)
-    );
+    min-height: calc(24.2vw + 15.7vh);
+}
+
+@media (orientation: portrait) {
+    #landing-4 {
+        min-height: calc(54vw + 83vh);
+    }
 }
 
 #landing-4-wrapper {
-    padding-top: if(
-        media(orientation: portrait): calc(12vw + 7.9vh) ;
-            else: calc(4vw + 2.65vh)
-    );
+    padding-top: calc(4vw + 2.65vh);
+}
+
+@media (orientation: portrait) {
+    #landing-4-wrapper {
+        padding-top: calc(12vw + 7.9vh);
+    }
 }
 
 #landing-4 h3 {
@@ -419,7 +458,7 @@ header {
     line-height: 100%;
 }
 
-#landing-4 #choice-title {
+#landing-4 .choice-title {
     color: var(--card-title);
     font-family: var(--font-inter);
     font-weight: 300;
@@ -452,12 +491,10 @@ header {
 
 .footer-column li,
 .footer-column p,
-.footer-links li,
 .footer-column .privacy-disclaimer {
     color: var(--text-soft);
     font-family: var(--font-inter);
     font-weight: 200;
-    line-height: auto;
 }
 
 .footer-column p {
@@ -472,18 +509,21 @@ header {
     font-family: var(--font-inter);
     font-weight: 200;
     font-size: 12px;
-    line-height: auto;
 }
 
-.footer-column li,
-.footer-links li {
+.footer-column li {
     list-style: none;
     font-size: 16px;
-    line-height: auto;
 }
 
-.footer-column li:hover,
-.footer-links li:hover {
+.footer-column li a,
+.footer-link a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.footer-column li a:hover,
+.footer-link a:hover {
     color: var(--blue) !important;
     text-decoration: underline;
 }
@@ -507,11 +547,6 @@ header {
     z-index: 20;
 }
 
-#copyright-wrapper {
-    position: relative;
-    height: 17vh;
-}
-
 #last-footer {
     margin-top: auto;
 }
@@ -519,10 +554,8 @@ header {
 .footer-link {
     color: var(--text-soft);
     font-family: var(--font-inter);
-    font-style: Thin;
     font-size: 12px;
     font-weight: 200;
-    line-height: auto;
 }
 
 #copyright {
@@ -541,6 +574,3 @@ header {
     }
 }
 
-.figure {
-    height: 10vh;
-}

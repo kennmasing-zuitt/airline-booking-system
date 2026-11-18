@@ -30,7 +30,6 @@
     color: var(--card-title) !important;
     font-family: var(--font-inter);
     font-size: 24px;
-    font-style: Medium !important;
     font-weight: 500;
     line-height: 100%;
 }
@@ -45,7 +44,6 @@
     color: var(--text-success) !important;
     font-family: var(--font-inter);
     font-size: 24px;
-    font-style: Medium !important;
     font-weight: 800;
     line-height: 100%;
 }
@@ -54,13 +52,16 @@
     color: var(--text-success) !important;
     font-family: var(--font-inter);
     font-size: 12px;
-    font-style: Light !important;
     font-weight: 300;
     line-height: 100%;
 }
 
 #details-content {
-    padding-bottom: if(
-        media(orientation: portrait): calc(2vw + 3vh) ; else: calc(3vw + 2vh)
-    );
+    padding-bottom: calc(3vw + 2vh);
+}
+
+@media (orientation: portrait) {
+    #details-content {
+        padding-bottom: calc(2vw + 3vh);
+    }
 }

@@ -11,22 +11,21 @@
 }
 
 #flight-listing-content {
-    padding-bottom: if(
-        media(orientation: portrait): calc(3vw + 4.5vh) ;
-            else: calc(4.5vw + 3vh)
-    );
+    padding-bottom: calc(4.5vw + 3vh);
 }
 
-#specifics-details {
+@media (orientation: portrait) {
+    #flight-listing-content {
+        padding-bottom: calc(3vw + 4.5vh);
+    }
+}
+
+.specifics-details {
     color: var(--text-muted) !important;
-    line-height: 20%;
+    line-height: 1.4;
     font-family: var(--font-inter);
     font-weight: 200;
     font-size: 10px;
-    /* font-size: if(
-        media(orientation: portrait): calc(0.7vw + 1vh) ;
-            else: calc(0.9vw + 0.6vh)
-    ); */
 }
 
 .arrow-next {

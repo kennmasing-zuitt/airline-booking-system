@@ -7,17 +7,23 @@
         rgba(109, 59, 161, 1) 100%
     );
 
-    height: if(
-        media(orientation: portrait): calc(30vw + 46vh) ;
-            else: calc(24.2vw + 15.7vh)
-    );
+    min-height: calc(24.2vw + 15.7vh);
+}
+
+@media (orientation: portrait) {
+    #common-landing {
+        min-height: calc(30vw + 46vh);
+    }
 }
 
 #common-landing-heading-wrapper {
-    padding-top: if(
-        media(orientation: portrait): calc(12vw + 18vh) ;
-            else: calc(7.5vw + 5vh)
-    );
+    padding-top: calc(7.5vw + 5vh);
+}
+
+@media (orientation: portrait) {
+    #common-landing-heading-wrapper {
+        padding-top: calc(12vw + 18vh);
+    }
 }
 
 #common-landing-mainheading-wrapper > h1,
@@ -29,30 +35,38 @@
 #common-landing-mainheading-wrapper > h1 {
     font-family: var(--font-archivo);
     font-weight: 400;
-    font-size: if(
-        media(orientation: portrait): calc(2.5vw + 3.8vh) ;
-            else: calc(4.5vw + 3vh)
-    );
+    font-size: calc(4.5vw + 3vh);
+}
+
+@media (orientation: portrait) {
+    #common-landing-mainheading-wrapper > h1 {
+        font-size: calc(2.5vw + 3.8vh);
+    }
 }
 
 #common-landing-subheading-wrapper > h3 {
     font-family: var(--font-inter);
     font-weight: 300;
-    font-size: if(
-        media(orientation: portrait): calc(1vw + 1.5vh) ;
-            else: calc(1.5vw + 1vh)
-    );
+    font-size: calc(1.5vw + 1vh);
+}
+
+@media (orientation: portrait) {
+    #common-landing-subheading-wrapper > h3 {
+        font-size: calc(1vw + 1.5vh);
+    }
 }
 
 #common-landing-overview-wrapper > p {
     color: var(--text-muted) !important;
-    line-height: auto;
     font-family: var(--font-inter);
     font-weight: 200;
-    font-size: if(
-        media(orientation: portrait): calc(0.7vw + 1vh) ;
-            else: calc(0.9vw + 0.6vh)
-    );
+    font-size: calc(0.9vw + 0.6vh);
+}
+
+@media (orientation: portrait) {
+    #common-landing-overview-wrapper > p {
+        font-size: calc(0.7vw + 1vh);
+    }
 }
 
 .common-card {
@@ -63,7 +77,6 @@
     color: var(--card-title) !important;
     font-family: var(--font-inter);
     font-size: 18px;
-    font-style: Medium !important;
     font-weight: 500;
     line-height: 100%;
 }
@@ -72,7 +85,6 @@
     color: var(--text-muted) !important;
     font-family: var(--font-inter);
     font-size: 10px;
-    font-style: Light !important;
     font-weight: 300;
     line-height: 100%;
 }
@@ -81,7 +93,6 @@
     color: var(--text-muted) !important;
     font-family: var(--font-inter);
     font-size: 12px;
-    font-style: Light !important;
     font-weight: 300;
     line-height: 100%;
 }
