@@ -4,8 +4,7 @@
     "packages": {
         ".": {
             "release-type": "simple",
-            "package-name": "airline-booking-system",
-            "release-as": "1.0.0"
+            "package-name": "airline-booking-system"
         }
     }
 }
